@@ -8,13 +8,13 @@ import PackageDescription
 import AppleProductTypes
 
 let package = Package(
-    name: "Benchmark",
+    name: "BenchLIB",
     platforms: [
         .iOS("15.2")
     ],
     products: [
         .iOSApplication(
-            name: "Benchmark",
+            name: "BenchLIB",
             targets: ["AppModule"],
             displayVersion: "1.0",
             bundleVersion: "1",
@@ -32,15 +32,9 @@ let package = Package(
             ]
         )
     ],
-    dependencies: [
-        .package(url: "https://github.com/onevcat/Kingfisher.git", "7.1.2"..<"8.0.0")
-    ],
     targets: [
         .executableTarget(
             name: "AppModule",
-            dependencies: [
-                .product(name: "Kingfisher", package: "Kingfisher")
-            ],
             path: "."
         )
     ]
