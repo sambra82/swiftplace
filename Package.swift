@@ -10,27 +10,10 @@ import AppleProductTypes
 let package = Package(
     name: "Benchmark",
     platforms: [
-        .iOS("15.2")
+        .iOS(.v15)
     ],
     products: [
-        .iOSApplication(
-            name: "Benchmark",
-            targets: ["AppModule"],
-            displayVersion: "1.0",
-            bundleVersion: "1",
-            iconAssetName: "AppIcon",
-            accentColorAssetName: "AccentColor",
-            supportedDeviceFamilies: [
-                .pad,
-                .phone
-            ],
-            supportedInterfaceOrientations: [
-                .portrait,
-                .landscapeRight,
-                .landscapeLeft,
-                .portraitUpsideDown(.when(deviceFamilies: [.pad]))
-            ]
-        )
+        .library(name: "Benchmark", targets: ["Benchmark"])
     ],
     dependencies: [
         .package(url: "https://github.com/onevcat/Kingfisher.git", "7.1.2"..<"8.0.0")
