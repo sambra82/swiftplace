@@ -1,6 +1,6 @@
 import Foundation
 
-public func benchmark_lib() async {
+public func benchmark_lib(){
     let t=CFAbsoluteTimeGetCurrent()
     var sum:Double=0
     var w1:Double = 2  //flipping between 1 and 2
