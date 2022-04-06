@@ -10,3 +10,9 @@ public func benchmark_fast_noTiming(){
         (sum += w3)
     }
 }
+
+public func anotherBench(){
+    let digitCounts = Array(repeating: 0.0, count: 1000000)
+    var digitCounts2 = Array(repeating: 0.0, count: 1000000)
+    for i in 0..<digitCounts.count {digitCounts2[i]=digitCounts[i]+2.0}
+}
